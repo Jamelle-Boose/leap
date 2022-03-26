@@ -1,18 +1,3 @@
-//
-// This is only a SKELETON file for the 'Leap' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-export const isLeap = year => {
-  if (year % 400 === 0) {
-    return Boolean(year % 4 === 0)
-  }
-  if (year % 4 === 0 && year % 400 === 0) {
-    return Boolean(year % 4 === 0)
-  }
-  if (year % 4 === 0) {
-    if (!(year % 100 === 0)) {
-      return Boolean(year % 4 === 0)
-    }
-  }
-  return false
+export const isLeap = n => {
+  return (n % 4 === 0 && n % 100 !== 0) || n % 400 === 0 ? true : false
 }
